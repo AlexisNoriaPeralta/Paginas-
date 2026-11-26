@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currículum vitae de Jessica Centeno Martínez, estudiante de Ingeniería Química.">
+  <title>Jessica Centeno Martínez | Ingeniería Química</title>
+  <style>
+    :root {
+      --morado: #642477;
+      --morado-oscuro: #40104f;
+      --lila: #ead8ef;
+      --lila-claro: #f8f0fa;
+      --texto: #29212d;
+      --secundario: #665c6b;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      padding: 28px 14px;
+      background: #f3edf5;
+      color: var(--texto);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .pagina {
+      max-width: 1050px;
+      margin: auto;
+      overflow: hidden;
+      background: white;
+      border-radius: 22px;
+      box-shadow: 0 15px 45px rgba(55, 20, 65, .13);
+    }
+    .encabezado {
+      position: relative;
+      overflow: hidden;
+      padding: 48px 25px 34px;
+      text-align: center;
+      background: linear-gradient(130deg, #f7ecfa, #e6c9ed 55%, #f8f0fa);
+      border-bottom: 5px solid #a66bb6;
+    }
+    .encabezado::before, .encabezado::after {
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+      background: #d4addf;
+      opacity: .48;
+    }
+    .encabezado::before { width: 250px; height: 250px; left: -140px; top: -170px; }
+    .encabezado::after { width: 220px; height: 220px; right: -120px; bottom: -165px; }
+    .nombre {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: var(--morado-oscuro);
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-size: clamp(2.7rem, 7vw, 4.8rem);
+      font-weight: 600;
+      line-height: 1.08;
+    }
+    .carrera {
+      position: relative;
+      z-index: 1;
+      margin: 15px 0 0;
+      color: #43214c;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 6px;
+    }
+    .decoracion {
+      position: absolute;
+      color: var(--morado);
+      font-size: 25px;
+    }
+    .estrella-uno { top: 25px; left: 9%; }
+    .estrella-dos { right: 20%; bottom: 20px; }
+    .atomo { top: 18px; right: 6%; font-size: 58px; }
+    .contenido { display: grid; grid-template-columns: 34% 66%; }
+    aside {
+      padding: 30px 25px;
+      background: linear-gradient(180deg, #ead7ef, #f4e8f6);
+    }
+    main { padding: 32px 38px; }
+    .bloque { margin-bottom: 25px; }
+    .titulo-lateral {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 13px;
+      color: var(--morado-oscuro);
+      font-size: 1.08rem;
+      font-weight: 800;
+    }
+    .icono {
+      display: inline-flex;
+      flex: 0 0 37px;
+      width: 37px;
+      height: 37px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--morado);
+      color: white;
+      font-size: 18px;
+    }
+    .dato { display: flex; gap: 10px; margin: 0 0 12px; font-size: .94rem; }
+    .simbolo { min-width: 22px; color: var(--morado); text-align: center; font-weight: 800; }
+    .separador { height: 2px; margin: 20px 0; background: #b98ac5; }
+    ul { margin: 7px 0; padding-left: 23px; }
+    li { margin: 4px 0; }
+    .titulo-principal {
+      display: inline-block;
+      margin: 0 0 12px;
+      padding: 7px 18px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #d9b5e2, #f0e0f3);
+      color: var(--morado-oscuro);
+      font-size: 1.1rem;
+      font-weight: 850;
+    }
+    .seccion { margin-bottom: 23px; padding-bottom: 20px; border-bottom: 2px solid #d6b9df; }
+    .seccion:last-child { border-bottom: 0; }
+    .encabezado-seccion { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .icono-principal { color: var(--morado); font-size: 28px; }
+    .grado { margin: 0; color: #32153d; font-size: 1.12rem; font-weight: 800; }
+    p { margin: 7px 0; }
+    a { color: inherit; overflow-wrap: anywhere; }
+    footer { padding: 16px; background: #542066; color: #f8edfa; text-align: center; font-size: .88rem; }
+    .acciones { display: flex; justify-content: center; margin: 0 auto 18px; }
+    .boton {
+      padding: 10px 17px;
+      border: 0;
+      border-radius: 9px;
+      background: var(--morado);
+      color: white;
+      font-size: .95rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .boton:hover { background: var(--morado-oscuro); }
+    @media (max-width: 720px) {
+      body { padding: 0; }
+      .pagina { border-radius: 0; }
+      .contenido { grid-template-columns: 1fr; }
+      main { padding: 27px 22px; }
+      aside { padding: 27px 22px; }
+      .atomo { font-size: 43px; right: 4%; }
+      .carrera { letter-spacing: 3px; font-size: .85rem; }
+    }
+    @media print {
+      body { padding: 0; background: white; }
+      .pagina { max-width: none; border-radius: 0; box-shadow: none; }
+      .acciones { display: none; }
+      .contenido { grid-template-columns: 34% 66%; }
+      aside, main { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="acciones">
+    <button class="boton" onclick="window.print()">Imprimir / Guardar como PDF</button>
+  </div>
+
+  <div class="pagina">
+    <header class="encabezado">
+      <span class="decoracion estrella-uno">✦</span>
+      <span class="decoracion estrella-dos">✧</span>
+      <span class="decoracion atomo" aria-hidden="true">⚛</span>
+      <h1 class="nombre">Jessica Centeno<br>Martínez</h1>
+      <p class="carrera">INGENIERÍA QUÍMICA</p>
+    </header>
+
+    <div class="contenido">
+      <aside>
+        <section class="bloque">
+          <h2 class="titulo-lateral"><span class="icono">▦</span> DATOS PERSONALES</h2>
+          <p class="dato"><span class="simbolo">▣</span><span>Fecha de nacimiento:<br>25 de mayo de 2008</span></p>
+          <p class="dato"><span class="simbolo">●</span><span>Edad: 18 años</span></p>
+          <p class="dato"><span class="simbolo">⚑</span><span>Nacionalidad: Mexicana</span></p>
+          <p class="dato"><span class="simbolo">⌖</span><span>Lugar de residencia:<br>Rancho Rincón de Centeno,<br>Juventino Rosas, Gto.</span></p>
+        </section>
+
+        <div class="separador"></div>
+
+        <section class="bloque">
+          <h2 class="titulo-lateral"><span class="icono">☎</span> CONTACTO</h2>
+          <p class="dato"><span class="simbolo">✉</span><span><a href="mailto:jessicacentenomartinez@gmail.com">jessicacentenomartinez@gmail.com</a></span></p>
+          <p class="dato"><span class="simbolo">⊘</span><span>Red profesional: No aplica</span></p>
+        </section>
+
+        <section class="bloque">
+          <h2 class="titulo-lateral"><span class="icono">◎</span> IDIOMAS</h2>
+          <p>Inglés: Nivel básico (Nivel 1)</p>
+        </section>
+
+        <section class="bloque">
+          <h2 class="titulo-lateral"><span class="icono">⚙</span> HABILIDADES</h2>
+          <ul>
+            <li>Responsabilidad</li>
+            <li>Comunicación</li>
+            <li>Organización</li>
+            <li>Facilidad de aprendizaje</li>
+          </ul>
+        </section>
+
+        <div style="text-align:center;color:#7a398c;font-size:43px;margin-top:20px" aria-hidden="true">⚗ ✧ ⚗</div>
+      </aside>
+
+      <main>
+        <section class="seccion">
+          <div class="encabezado-seccion"><span class="icono-principal">●</span><h2 class="titulo-principal">SOBRE MÍ</h2></div>
+          <p>Soy una persona responsable, dedicada y con muchas ganas de aprender. Me gusta adquirir nuevos conocimientos, enfrentar retos y trabajar en equipo para lograr mis objetivos. Elegí la Ingeniería Química porque me interesa la ciencia, la innovación y el impacto que puedo generar en la industria y en la sociedad.</p>
+        </section>
+
+        <section class="seccion">
+          <div class="encabezado-seccion"><span class="icono-principal">🎓</span><h2 class="titulo-principal">FORMACIÓN ACADÉMICA</h2></div>
+          <p class="grado">Ingeniería Química</p>
+          <p>Tecnológico Nacional de México, Campus Celaya</p>
+          <p>Semestre: 1° B</p>
+        </section>
+
+        <section class="seccion">
+          <div class="encabezado-seccion"><span class="icono-principal">⟳</span><h2 class="titulo-principal">CURSOS Y ACTUALIZACIONES</h2></div>
+          <p>Uso de programas básicos como:</p>
+          <p>Microsoft Excel, Word y PowerPoint.</p>
+          <p>Actualmente en proceso de formación en Ingeniería Química, con interés en profundizar en áreas como procesos químicos, control de calidad y desarrollo de proyectos.</p>
+        </section>
+      </main>
+    </div>
+
+    <footer>Jessica Centeno Martínez · Currículum Vitae · Ingeniería Química</footer>
+  </div>
+</body>
+</html>
